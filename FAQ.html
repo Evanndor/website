@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        .faq-item { cursor: pointer; }
+        .answer { display: none; padding: 10px; }
+        .faq-item.active .answer { display: block; }
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-item">
+        <h2>Question 1?</h2>
+        <div class="answer">
+            <p>Answer to question 1 here.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h2>Question 2?</h2>
+        <div class="answer">
+            <p>Answer to question 2 here.</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item h2').forEach(h => {
+            h.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
