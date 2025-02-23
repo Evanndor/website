@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Evanndor Place - Courtyard Room</title>
+    <title>Evanndor Place - Stratford, Ontario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore the Courtyard Room at Evanndor Place in Stratford, Ontario">
+    <meta name="description" content="Welcome to Evanndor Place, a historic retreat in Stratford, Ontario">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <!--[if lte IE 8]>
@@ -34,7 +34,7 @@
         .banner-head {
             margin: 0 0 8px;
             font-size: 2.5em;
-            color: #2c3e50 !important;
+            color: #2c3e50;
         }
         .banner-head a {
             text-decoration: none;
@@ -57,40 +57,61 @@
             line-height: 1.6;
             text-align: center;
         }
-        .gallery {
-            margin: 10px;
-            border: 1px solid #ccc;
-            width: 180px;
-            display: inline-block;
-            vertical-align: top;
-            transition: border 0.3s;
-        }
-        .gallery:hover {
-            border: 1px solid #777;
-        }
-        .gallery img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .desc {
-            padding: 8px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #526066;
-        }
-        .gallery-section {
+        .faq-link {
             text-align: center;
             margin: 20px 0;
         }
-        .gallery-section h2 {
+        .standard, .suite-section, .map-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .standard h2, .suite-section h2, .map-section h2 {
             font-size: 1.8em;
             color: #2c3e50;
             margin-bottom: 15px;
         }
-        .calendar {
+        .standard ul, .suite-section ul, .map-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
             text-align: center;
-            margin: 30px 0;
+        }
+        .standard ul li, .suite-section ul li, .map-section ul li {
+            margin: 8px 0;
+        }
+        .season li:before {
+            content: "*";
+            position: relative;
+            left: -10px;
+        }
+        .suite-section .details {
+            font-size: 1.1em; /* Slightly smaller room details */
+        }
+        .price {
+            font-size: 2.5em; /* Largest price text */
+            color: #2c3e50;
+            margin: 15px 0;
+        }
+        .price sup {
+            font-size: 0.6em;
+        }
+        .price span {
+            font-size: 0.5em;
+            color: #526066;
+        }
+        .price ul {
+            font-size: 0.85em; /* Smallest extra costs text */
+        }
+        .suite-section img {
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .map iframe {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -106,12 +127,11 @@
                 </div>
                 <div class="pure-u-1 pure-u-sm-1-3">
                     <div class="info">
-                        Ewa Murphy<br>
                         14 Milton St.<br>
                         Stratford, Ontario<br>
                         N5A 3T8<br>
-                        Cell: (226) 750-2102<br>
-                        Cell: (519) 577-6171<br>
+                        Eva's Cell: (519) 577-6171<br>
+                        Martin's Cell: (226) 750-2102<br>
                         Email: <a href="mailto:evanndor@gmail.com">evanndor@gmail.com</a>
                     </div>
                 </div>
@@ -124,49 +144,141 @@
                     <img class="pure-img" src="main.jpg" alt="Evanndor Place Main Area">
                 </div>
             </div>
-        </div>
-
-        <div class="gallery-section">
-            <h2>Courtyard Room</h2>
-            <div>
-                <div class="gallery">
-                    <a target="_blank" href="courtyard (10).jpg">
-                        <img src="courtyard (10).jpg" alt="Courtyard Room Queen Sized Bed">
-                    </a>
-                    <div class="desc">Queen Sized Bed</div>
-                </div>
-                <div class="gallery">
-                    <a target="_blank" href="courtyard (7).jpg">
-                        <img src="courtyard (7).jpg" alt="Courtyard Room Kitchen">
-                    </a>
-                    <div class="desc">Kitchen</div>
-                </div>
-                <div class="gallery">
-                    <a target="_blank" href="courtyard (9).jpg">
-                        <img src="courtyard (9).jpg" alt="Courtyard Room Kitchen">
-                    </a>
-                    <div class="desc">Kitchen</div>
-                </div>
-                <div class="gallery">
-                    <a target="_blank" href="courtyard (14).jpg">
-                        <img src="courtyard (14).jpg" alt="Courtyard Room Bathroom Area">
-                    </a>
-                    <div class="desc">Bathroom Area</div>
-                </div>
-                <div class="gallery">
-                    <a target="_blank" href="courtyard (19).jpg">
-                        <img src="courtyard (19).jpg" alt="Courtyard Room Courtyard">
-                    </a>
-                    <div class="desc">Courtyard</div>
-                </div>
-            </div>
             <div class="description">
-                The Courtyard Room is our best choice for extended stays, equipped with a full kitchen including a dishwasher. It also features a private, fenced-in outdoor area, illuminated in the evening for your enjoyment. This room comfortably accommodates up to 2 guests.
+                Perfectly positioned just south of downtown Stratford, Evanndor Place blends serene charm with prime convenience, resting a mere two blocks from the bustling main street and a short walk from the city’s most captivating attractions. Built in the 1860s, this historic treasure has been masterfully restored and thoughtfully modernized, its elegant furnishings a heartfelt nod to its rich past.<br><br>
+                Please inquire by phone or <a href="mailto:evanndor@gmail.com">email</a> and allow us to help make your stay in Stratford enjoyable and memorable.
+            </div>
+            <div class="faq-link">
+                <a href="/FAQ">Click Here to See Frequently Asked Questions</a>
             </div>
         </div>
 
-        <div class="calendar">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&src=ZnBzdTZiYjgwY3AzMGE0N2psYTc4aTY5cDBycW9ybjFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237CB342" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="standard">
+            <h2>Standard Furnishings for All Suites and Apartments</h2>
+            <ul>
+                <li>Free Parking On-Site</li>
+                <li>Free WiFi</li>
+                <li>Queen Size Bed</li>
+                <li>Individually Controlled AC and Heat</li>
+                <li>Private Ensuite Bathroom with Shower</li>
+                <li>Flatscreen TV</li>
+                <li>Coffee Maker</li>
+                <li>Electric Kettle</li>
+                <li>Microwave</li>
+                <li>Mini-Fridge</li>
+                <li>Dishware + Cutlery</li>
+                <li>Shared Washer + Dryer</li>
+            </ul>
+            <ul class="season">
+                <li>Please inquire about pricing as it changes due to demand</li>
+                <li>Evanndor operates from May till the end of August</li>
+                <li>Prices do not include taxes (HST 13% & 4% Municipal Accommodation Tax)</li>
+            </ul>
+        </div>
+
+        <div class="suite-section">
+            <h2><a href="/Captain">Captain Room</a></h2>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img class="pure-img" src="captain.jpg" alt="Captain Room">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <ul class="details">
+                        <li>Small porch for outside enjoyment</li>
+                    </ul>
+                    <div class="price">
+                        $140–$230<sup>*</sup> <span>CAD / night</span>
+                        <ul>
+                            <li>+ $50 cleaning fee</li>
+                            <li>Prices vary based on seasonal demand and availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suite-section">
+            <h2><a href="/Courtyard">Courtyard Room</a></h2>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img class="pure-img" src="apartment.jpg" alt="Courtyard Room">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <ul class="details">
+                        <li>Private courtyard</li>
+                        <li>Full kitchen including oven, dishwasher, full-size refrigerator, dining area</li>
+                    </ul>
+                    <div class="price">
+                        $160–$250<sup>*</sup> <span>CAD / night</span>
+                        <ul>
+                            <li>+ $50 cleaning fee</li>
+                            <li>Prices vary based on seasonal demand and availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suite-section">
+            <h2><a href="/Sunset">Sunset Room</a></h2>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img class="pure-img" src="sunset.jpg" alt="Sunset Room">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <ul class="details">
+                        <li>South-West Balcony</li>
+                        <li>Separate Powder Room</li>
+                        <li>Separate Shower Room</li>
+                        <li>Sofa Bed</li>
+                    </ul>
+                    <div class="price">
+                        $150–$240<sup>*</sup> <span>CAD / night</span>
+                        <ul>
+                            <li>+ $50 cleaning fee</li>
+                            <li>Prices vary based on seasonal demand and availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suite-section">
+            <h2><a href="/Watercolour">Watercolour Room</a></h2>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img class="pure-img" src="watercolor.jpg" alt="Watercolour Room">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <ul class="details">
+                        <li>South-East Balcony</li>
+                        <li>Ensuite with Large Shower</li>
+                        <li>Sofa Bed</li>
+                    </ul>
+                    <div class="price">
+                        $150–$240<sup>*</sup> <span>CAD / night</span>
+                        <ul>
+                            <li>+ $50 cleaning fee</li>
+                            <li>Prices vary based on seasonal demand and availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2>Location</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.5298156663653!2d-80.98102898506242!3d43.36594477913223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eadfa58026ac3%3A0x2f0f15d41a0a9bf3!2s14+Milton+St%2C+Stratford%2C+ON+N5A+3T8!5e0!3m2!1sen!2sca!4v1553186543500" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <ul>
+                <li>Stratford Festival Theatre: 0.4 mile / 600 m</li>
+                <li>Avon Theatre: 0.3 mile / 450 m</li>
+                <li>Studio Theatre: 0.3 mile / 450 m</li>
+                <li>Tom Patterson Theatre: 0.7 mile / 1.1 km</li>
+                <li>Victoria Lake and River: 0.6 mile / 1 km</li>
+                <li>London International Airport: 32 miles / 51 km</li>
+            </ul>
         </div>
 
         <div class="footer">
