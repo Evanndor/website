@@ -17,15 +17,17 @@
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             color: var(--text-color);
             background-color: var(--background-color);
             line-height: 1.6;
+            background-image: url('nihgthouse.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0px;
         }
-
         header {
             background-color: white;
             box-shadow: var(--shadow);
@@ -33,7 +35,6 @@
             top: 0;
             z-index: 1000;
         }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -42,41 +43,34 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 1.5em;
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 700;
         }
-
         nav ul {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
         }
-
         nav li {
             margin-left: 20px;
         }
-
         nav a {
             color: var(--primary-color);
             text-decoration: none;
             transition: var(--transition);
         }
-
         nav a:hover {
             color: var(--secondary-color);
         }
-
         .menu-toggle {
             display: none;
             flex-direction: column;
             cursor: pointer;
         }
-
         .menu-toggle span {
             height: 3px;
             width: 25px;
@@ -84,57 +78,47 @@
             margin-bottom: 5px;
             transition: var(--transition);
         }
-
         .main {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-
         .banner {
             text-align: center;
             margin-bottom: 40px;
         }
-
         .banner-head {
             font-size: 2.5em;
             margin: 0;
             color: var(--primary-color);
         }
-
         .banner-sub {
             font-size: 1.5em;
             color: var(--primary-color);
             margin: 10px 0;
         }
-
         .info {
             font-size: 1em;
             line-height: 1.8;
             margin-top: 20px;
         }
-
         .info a {
             color: var(--secondary-color);
             text-decoration: none;
             transition: var(--transition);
         }
-
         .info a:hover {
             text-decoration: underline;
         }
-
         .hero {
             position: relative;
             margin-bottom: 40px;
         }
-
         .hero-images {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 20px;
         }
-
         .hero img {
             width: 100%;
             height: 400px;
@@ -144,33 +128,27 @@
             transition: var(--transition);
             cursor: pointer;
         }
-
         .hero img:hover {
             transform: scale(1.02);
         }
-
         .description {
             font-size: 1.1em;
             margin-bottom: 40px;
             text-align: justify;
         }
-
         .faq-link {
             text-align: center;
             margin-bottom: 40px;
         }
-
         .faq-link a {
             color: var(--secondary-color);
             font-weight: 500;
             text-decoration: none;
             transition: var(--transition);
         }
-
         .faq-link a:hover {
             color: var(--accent-color);
         }
-
         .standard {
             background-color: white;
             padding: 20px;
@@ -178,29 +156,24 @@
             box-shadow: var(--shadow);
             margin-bottom: 40px;
         }
-
         .standard h2 {
             color: var(--primary-color);
             margin-bottom: 20px;
         }
-
         .standard ul {
             list-style-type: disc;
             padding-left: 20px;
         }
-
         .season {
             font-style: italic;
             color: #666;
             margin-top: 20px;
         }
-
         .suites {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-
         .suite-section {
             background-color: white;
             padding: 20px;
@@ -208,23 +181,19 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
-
         .suite-section:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             transform: translateY(-5px);
         }
-
         .suite-section h2 {
             color: var(--primary-color);
             margin-bottom: 20px;
             font-size: 1.4em;
         }
-
         .suite-section h2 a {
             color: inherit;
             text-decoration: none;
         }
-
         .suite-section img {
             width: 100%;
             height: 200px;
@@ -233,33 +202,27 @@
             margin-bottom: 15px;
             cursor: pointer;
         }
-
         .price {
             font-size: 1.8em;
             color: var(--accent-color);
             margin: 10px 0;
         }
-
         .price sup {
             font-size: 0.5em;
         }
-
         .price span {
             font-size: 0.5em;
             color: #666;
         }
-
         .price-conditions,
         .features-list {
             font-size: 0.9em;
             color: #666;
         }
-
         .features-list ul {
             list-style-type: circle;
             padding-left: 20px;
         }
-
         /* Modal for image lightbox */
         .modal {
             display: none;
@@ -273,13 +236,11 @@
             justify-content: center;
             align-items: center;
         }
-
         .modal-content {
             max-width: 90%;
             max-height: 90%;
             border-radius: 8px;
         }
-
         .close {
             position: absolute;
             top: 20px;
@@ -288,39 +249,32 @@
             font-size: 40px;
             cursor: pointer;
         }
-
         /* Responsive menu */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
             }
-
             nav ul {
                 display: none;
                 flex-direction: column;
                 width: 100%;
                 text-align: center;
             }
-
             nav li {
                 margin: 10px 0;
             }
-
             .menu-toggle {
                 display: flex;
                 position: absolute;
                 right: 20px;
                 top: 20px;
             }
-
             .nav-open ul {
                 display: flex;
             }
-
             .hero-images {
                 grid-template-columns: 1fr;
             }
-
             .hero img {
                 height: 300px;
             }
@@ -346,10 +300,9 @@
             </div>
         </div>
     </header>
-
     <div class="main" id="home">
         <div class="banner">
-            <h1 class="banner-head">E V A N N D O R   P L A C E</h1>
+            <h1 class="banner-head">E V A N N D O R P L A C E</h1>
             <div class="info" id="contact">
                 14 Milton St.<br>
                 Stratford, Ontario<br>
@@ -359,23 +312,19 @@
                 Email: <a href="mailto:evanndor@gmail.com">evanndor@gmail.com</a>
             </div>
         </div>
-
         <div class="hero">
             <div class="hero-images">
                 <img src="evanndor.jpg" alt="Evanndor Place Exterior" loading="lazy" onclick="openModal(this.src)">
                 <img src="main.jpg" alt="Evanndor Place Main Area" loading="lazy" onclick="openModal(this.src)">
             </div>
         </div>
-
         <div class="description">
             Perfectly positioned just south of downtown Stratford, Evanndor Place blends serene charm with prime convenience, resting a mere two blocks from the bustling main street and a short walk from the city’s most captivating attractions. Built in the 1860s, this historic treasure has been masterfully restored and thoughtfully modernized, its elegant furnishings a heartfelt nod to its rich past.<br><br>
             Please inquire by phone or <a href="mailto:evanndor@gmail.com">email</a> and allow us to help make your stay in Stratford enjoyable and memorable.
         </div>
-
         <div class="faq-link">
             <a href="/FAQ">Click Here to See Frequently Asked Questions</a>
         </div>
-
         <div class="standard">
             <h2>Standard Furnishings for All Suites and Apartments</h2>
             <ul>
@@ -398,7 +347,6 @@
                 Prices do not include taxes (HST 13% & 4% Municipal Accommodation Tax)
             </ul>
         </div>
-
         <h2 id="suites" style="text-align: center; color: var(--primary-color); margin-bottom: 30px;">Our Suites</h2>
         <div class="suites">
             <div class="suite-section">
@@ -418,7 +366,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="suite-section">
                 <h2><a href="/Courtyard">Courtyard Room</a></h2>
                 <img src="apartment.jpg" alt="Courtyard Room" loading="lazy" onclick="openModal(this.src)">
@@ -437,7 +384,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="suite-section">
                 <h2><a href="/Sunset">Sunset Room</a></h2>
                 <img src="sunset.jpg" alt="Sunset Room" loading="lazy" onclick="openModal(this.src)">
@@ -458,7 +404,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="suite-section">
                 <h2><a href="/Watercolour">Watercolour Room</a></h2>
                 <img src="watercolor.jpg" alt="Watercolour Room" loading="lazy" onclick="openModal(this.src)">
@@ -479,30 +424,25 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal for lightbox -->
         <div id="imageModal" class="modal" onclick="closeModal()">
             <span class="close" onclick="closeModal()">&times;</span>
             <img class="modal-content" id="modalImage">
         </div>
     </div>
-
     <script>
         function toggleMenu() {
             document.querySelector('nav').classList.toggle('nav-open');
         }
-
         function openModal(src) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
             modal.style.display = 'flex';
             modalImg.src = src;
         }
-
         function closeModal() {
             document.getElementById('imageModal').style.display = 'none';
         }
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -511,6 +451,11 @@
                     behavior: 'smooth'
                 });
             });
+        });
+        // Parallax background effect
+        window.addEventListener('scroll', function() {
+            let scroll = window.pageYOffset;
+            document.body.style.backgroundPosition = 'center ' + (-scroll * 0.5) + 'px';
         });
     </script>
 </body>
