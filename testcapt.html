@@ -16,6 +16,7 @@
             --accent-color: #e67e22;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
+            --announcement-height: 20px; /* Half the original size */
         }
         body {
             margin: 0;
@@ -29,11 +30,39 @@
             background-position: center 0px;
             background-attachment: fixed; /* Helps with parallax on some browsers */
         }
+        .announcement-bar {
+            background-color: #808080; /* Grey background */
+            color: #000; /* Black text */
+            text-align: center;
+            padding: 5px 0; /* Adjusted for smaller height */
+            z-index: 999; /* Below header */
+            overflow: hidden;
+            height: var(--announcement-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .announcement-bar p {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite; /* Slowed down to 30s */
+            font-size: 0.8em; /* Smaller font size */
+            margin: 0;
+            padding: 0 100%; /* Extra padding to make scrolling seamless */
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
         header {
             background-color: white;
             box-shadow: var(--shadow);
             position: sticky;
-            top: 0;
+            top: 0; /* Now at top since announcement is below */
             z-index: 1000;
         }
         .nav-container {
@@ -302,6 +331,9 @@
             </div>
         </div>
     </header>
+    <div class="announcement-bar">
+        <p>We are now booking for the 2026 season</p>
+    </div>
     <div class="main" id="home">
         <div class="banner">
             <h1 class="banner-head">E V A N N D O R</h1>
