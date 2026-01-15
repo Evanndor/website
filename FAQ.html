@@ -1,58 +1,295 @@
-<!DOCTYPE html>
+HTML<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <title>Evanndor Place - FAQ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Frequently Asked Questions about Evanndor Place">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-    <!--<![endif]-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        .main {
-            padding: 20px;
-            max-width: 1024px;
-            margin: 0 auto;
-            color: #526066;
-            background-color: whitesmoke;
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --accent-color: #e67e22;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
-        .footer {
-            margin-top: 40px;
-            margin-bottom: 40px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+            background-image: url('nihgthouse.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0px;
+            background-attachment: fixed; /* Helps with parallax on some browsers */
+        }
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: var(--primary-color);
+            margin-bottom: 5px;
+            transition: var(--transition);
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
         }
         .banner {
-            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 40px;
         }
         .banner-head {
-            margin-top: 0;
-            margin-bottom: 8px;
             font-size: 2.5em;
-            color: #2c3e50;
+            margin: 0;
+            color: var(--primary-color);
         }
         .banner-sub {
-            margin: 10px 0;
             font-size: 1.5em;
-            color: #34495e;
-        }
-        .description {
-            padding-top: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
+            color: var(--primary-color);
+            margin: 10px 0;
         }
         .info {
-            text-align: right;
+            font-size: 1em;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+        .info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .info a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .hero-images {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .hero img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .hero img:hover {
+            transform: scale(1.02);
+        }
+        .description {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        .faq-link {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-link a {
+            color: var(--secondary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .faq-link a:hover {
+            color: var(--accent-color);
+        }
+        .standard {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        .standard h2 {
+            color: var(--primary-color);
             margin-bottom: 20px;
-            font-size: 0.95em;
+        }
+        .standard ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .season {
+            font-style: italic;
+            color: #666;
+            margin-top: 20px;
+        }
+        .suites {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .suite-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .suite-section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        .suite-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .suite-section h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .suite-section img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .price {
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin: 10px 0;
+        }
+        .price sup {
+            font-size: 0.5em;
+        }
+        .price span {
+            font-size: 0.5em;
+            color: #666;
+        }
+        .price-conditions,
+        .features-list {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .features-list ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        /* Modal for image lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        /* Responsive menu */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            .nav-open ul {
+                display: flex;
+            }
+            .hero-images {
+                grid-template-columns: 1fr;
+            }
+            .hero img {
+                height: 300px;
+            }
+        }
+        /* FAQ styles */
+        .faq-section {
+            margin: 20px 0;
+        }
+        .faq-section h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-align: center;
         }
         .faq-list {
             list-style: none;
@@ -61,136 +298,186 @@
         }
         .faq-list li {
             margin-bottom: 25px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .faq-list li:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
         .faq-list li strong {
             display: block;
             font-size: 1.2em;
-            color: #2c3e50;
+            color: var(--primary-color);
             margin-bottom: 5px;
         }
         .faq-list li p {
-            margin: 5px 0 0 20px;
-            color: #526066;
+            margin: 5px 0 0 0;
+            color: var(--text-color);
+        }
+        .footer {
+            margin: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="banner">
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-sm-2-3">
-                    <h1 class="banner-head">Evanndor Place</h1>
-                    <h2 class="banner-sub">Stratford, Ontario</h2>
-                </div>
-                <div class="pure-u-1 pure-u-sm-1-3">
-                    <div class="info">
-                        Ewa Murphy<br>
-                        14 Milton St.<br>
-                        Stratford, Ontario<br>
-                        N5A 3T8<br>
-                        Cell: (226) 750-2102<br>
-                        Cell: (519) 577-6171<br>
-                        Email: <a href="mailto:evanndor@gmail.com">evanndor@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-sm-3-4">
-                    <img class="pure-img" src="evanndor.jpg" alt="Evanndor Place Exterior">
-                </div>
-                <div class="pure-u-1 pure-u-sm-1-4">
-                    <img class="pure-img" src="main.jpg" alt="Evanndor Place Main Area">
-                </div>
-            </div>
-            <div class="description">
-                <p>Below are answers to Frequently Asked Questions about Evanndor Place. If you don’t find what you’re looking for, please feel free to reach out—we’d be happy to assist you!</p>
-                <ul class="faq-list">
-                    <li>
-                        <strong>Where is Evanndor Place located?</strong>
-                        <p>Evanndor is a 5-minute walk from the Avon Theatre. You can find it on <a href="https://maps.google.com" target="_blank">Google Maps here</a>.</p>
-                    </li>
-                    <li>
-                        <strong>What is the best way to book with you?</strong>
-                        <p>We offer preferred pricing through private bookings, though we’re also on other platforms. Email correspondence is preferred.</p>
-                    </li>
-                    <li>
-                        <strong>Does your facility have TV?</strong>
-                        <p>Every room is equipped with a 40" TV, a Google Chromecast with Netflix, and access to local basic TV channels.</p>
-                    </li>
-                    <li>
-                        <strong>Is there internet available?</strong>
-                        <p>Yes, we provide 1 Gigabit service, ensuring all guests can stream and use the internet without issues.</p>
-                    </li>
-                    <li>
-                        <strong>Do all your rooms have a private bathroom?</strong>
-                        <p>Yes, all rooms have their own designated, attached private bathrooms—not shared.</p>
-                    </li>
-                    <li>
-                        <strong>How many guests can stay in each room?</strong>
-                        <p>Main level rooms (Captain and Courtyard) accommodate 2 guests each. Upper level rooms (Sunset and Watercolour) permit 3 guests, with a couch that converts into a sleeping arrangement.</p>
-                    </li>
-                    <li>
-                        <strong>What forms of payment do you accept?</strong>
-                        <p>For Canadian guests: e-Transfer, cash, or cheques. For American guests: cash or checks (converted to CAD based on Google’s exchange rate on booking day). We’re working on adding credit card payments soon.</p>
-                    </li>
-                    <li>
-                        <strong>What do you require for a deposit?</strong>
-                        <p>We request a $200 deposit, fully refundable if canceled 15 days before check-in. Within 15 days, the deposit is forfeited. For bookings over 5 days, a 50% deposit is required, with the remainder due at check-in.</p>
-                    </li>
-                    <li>
-                        <strong>Can I buy a gift certificate?</strong>
-                        <p>No, we do not offer gift certificates at this time.</p>
-                    </li>
-                    <li>
-                        <strong>Can I arrive early?</strong>
-                        <p>We’ll do our best to accommodate early arrivals—please inform us of your intended time. If early check-in isn’t possible, we offer storage for belongings and parking (subject to availability). Standard check-in is 4:00 PM.</p>
-                    </li>
-                    <li>
-                        <strong>Can I request a late check-out?</strong>
-                        <p>Please inquire about late check-out. If no one is checking in after you, we can accommodate a later departure. Standard check-out is 10:30 AM.</p>
-                    </li>
-                    <li>
-                        <strong>Can I stay for just one night?</strong>
-                        <p>We typically require a two-night minimum, but one-night stays may be available on weeknights later in the season (July/August), excluding weekends.</p>
-                    </li>
-                    <li>
-                        <strong>Do you serve breakfast?</strong>
-                        <p>We don’t offer breakfast, but each room includes a bowl of fruit, granola bars, a complimentary bottle of wine, water, and milk for coffee.</p>
-                    </li>
-                    <li>
-                        <strong>What appliances are in the room?</strong>
-                        <p>Each room has a K-cup coffee maker, electric kettle, microwave, and bar fridge. The Courtyard room includes a full-sized kitchen.</p>
-                    </li>
-                    <li>
-                        <strong>Is there parking available?</strong>
-                        <p>One spot is designated per room. Additional parking is available at the public lot across Downie Street at the bus terminal (free overnight). Inquire if you need more on-site parking.</p>
-                    </li>
-                    <li>
-                        <strong>Can I bring my child?</strong>
-                        <p>Our facilities are not designed to accommodate small children.</p>
-                    </li>
-                    <li>
-                        <strong>Can I smoke or vape in my room?</strong>
-                        <p>Smoking and vaping are strictly prohibited indoors. Outdoor smoking is permitted—please be mindful of other guests. A $300 surcharge applies for indoor smoking/vaping to cover odor cleaning.</p>
-                    </li>
-                    <li>
-                        <strong>Can I bring my pet?</strong>
-                        <p>No, pets are not allowed.</p>
-                    </li>
-                    <li>
-                        <strong>Can you help with restaurant suggestions or dinner reservations?</strong>
-                        <p>Most restaurants offer online reservations and menus on their websites. We also provide an annually updated list of recommendations—please inquire!</p>
-                    </li>
-                    <li>
-                        <strong>Does the room require a key? Where do I pick it up?</strong>
-                        <p>All rooms and the entrance use keypad combinations. You’ll receive access details via email (or your preferred method) once your room is ready.</p>
-                    </li>
+    <header>
+        <div class="nav-container">
+            <a href="https://www.evanndor.com/" class="logo">Evanndor Place</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#suites">Suites</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/FAQ">FAQ</a></li>
                 </ul>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+        </div>
+    </header>
+    <div class="main" id="home">
+        <div class="banner">
+            <h1 class="banner-head">E V A N N D O R</h1>
+            <div class="info" id="contact">
+                14 Milton St.<br>
+                Stratford, Ontario<br>
+                Martin : (226) 750-2102 (Text is Prefered)<br>
+                Eva's : (519) 577-6171<br>
+                Email: <a href="mailto:evanndor@gmail.com">evanndor@gmail.com</a>
+            </div>
+        </div>
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p class="description">Below are answers to Frequently Asked Questions about Evanndor Place. If you don’t find what you’re looking for, please feel free to reach out—we’d be happy to assist you!</p>
+            <ul class="faq-list">
+                <li>
+                    <strong>Where is Evanndor Place located?</strong>
+                    <p>Evanndor is a 5-minute walk from the Avon Theatre. You can find it on <a href="https://maps.google.com" target="_blank">Google Maps here</a>.</p>
+                </li>
+                <li>
+                    <strong>What is the best way to book with you?</strong>
+                    <p>We offer preferred pricing through private bookings, though we’re also on other platforms. Email correspondence is preferred.</p>
+                </li>
+                <li>
+                    <strong>Does your facility have TV?</strong>
+                    <p>Every room is equipped with a 40" TV, a Google Chromecast with Netflix, and access to local basic TV channels.</p>
+                </li>
+                <li>
+                    <strong>Is there internet available?</strong>
+                    <p>Yes, we provide 1 Gigabit service, ensuring all guests can stream and use the internet without issues.</p>
+                </li>
+                <li>
+                    <strong>Do all your rooms have a private bathroom?</strong>
+                    <p>Yes, all rooms have their own designated, attached private bathrooms—not shared.</p>
+                </li>
+                <li>
+                    <strong>How many guests can stay in each room?</strong>
+                    <p>Main level rooms (Captain and Courtyard) accommodate 2 guests each. Upper level rooms (Sunset and Watercolour) permit 3 guests, with a couch that converts into a sleeping arrangement.</p>
+                </li>
+                <li>
+                    <strong>What forms of payment do you accept?</strong>
+                    <p>For Canadian guests: e-Transfer, cash, or cheques. For American guests: cash or checks (converted to CAD based on Google’s exchange rate on booking day). We’re working on adding credit card payments soon.</p>
+                </li>
+                <li>
+                    <strong>What do you require for a deposit?</strong>
+                    <p>We request a $200 deposit, fully refundable if canceled 15 days before check-in. Within 15 days, the deposit is forfeited. For bookings over 5 days, a 50% deposit is required, with the remainder due at check-in.</p>
+                </li>
+                <li>
+                    <strong>Can I buy a gift certificate?</strong>
+                    <p>No, we do not offer gift certificates at this time.</p>
+                </li>
+                <li>
+                    <strong>Can I arrive early?</strong>
+                    <p>We’ll do our best to accommodate early arrivals—please inform us of your intended time. If early check-in isn’t possible, we offer storage for belongings and parking (subject to availability). Standard check-in is 4:00 PM.</p>
+                </li>
+                <li>
+                    <strong>Can I request a late check-out?</strong>
+                    <p>Please inquire about late check-out. If no one is checking in after you, we can accommodate a later departure. Standard check-out is 10:30 AM.</p>
+                </li>
+                <li>
+                    <strong>Can I stay for just one night?</strong>
+                    <p>We typically require a two-night minimum, but one-night stays may be available on weeknights later in the season (July/August), excluding weekends.</p>
+                </li>
+                <li>
+                    <strong>Do you serve breakfast?</strong>
+                    <p>We don’t offer breakfast, but each room includes a bowl of fruit, granola bars, a complimentary bottle of wine, water, and milk for coffee.</p>
+                </li>
+                <li>
+                    <strong>What appliances are in the room?</strong>
+                    <p>Each room has a K-cup coffee maker, electric kettle, microwave, and bar fridge. The Courtyard room includes a full-sized kitchen.</p>
+                </li>
+                <li>
+                    <strong>Is there parking available?</strong>
+                    <p>One spot is designated per room. Additional parking is available at the public lot across Downie Street at the bus terminal (free overnight). Inquire if you need more on-site parking.</p>
+                </li>
+                <li>
+                    <strong>Can I bring my child?</strong>
+                    <p>Our facilities are not designed to accommodate small children.</p>
+                </li>
+                <li>
+                    <strong>Can I smoke or vape in my room?</strong>
+                    <p>Smoking and vaping are strictly prohibited indoors. Outdoor smoking is permitted—please be mindful of other guests. A $300 surcharge applies for indoor smoking/vaping to cover odor cleaning.</p>
+                </li>
+                <li>
+                    <strong>Can I bring my pet?</strong>
+                    <p>No, pets are not allowed.</p>
+                </li>
+                <li>
+                    <strong>Can you help with restaurant suggestions or dinner reservations?</strong>
+                    <p>Most restaurants offer online reservations and menus on their websites. We also provide an annually updated list of recommendations—please inquire!</p>
+                </li>
+                <li>
+                    <strong>Does the room require a key? Where do I pick it up?</strong>
+                    <p>All rooms and the entrance use keypad combinations. You’ll receive access details via email (or your preferred method) once your room is ready.</p>
+                </li>
+            </ul>
         </div>
         <div class="footer">
-            &copy; 2025 Evanndor Place. All rights reserved.
+            © 2026 Evanndor Place. All rights reserved.
+        </div>
+        <!-- Modal for lightbox (optional, as no images, but included for consistency) -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
         </div>
     </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('nav-open');
+        }
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // Parallax background effect
+        window.addEventListener('scroll', function() {
+            let scroll = window.pageYOffset;
+            document.body.style.backgroundPositionY = (-scroll * 0.3) + 'px'; // Adjusted speed for gentle movement
+        });
+    </script>
 </body>
 </html>
