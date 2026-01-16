@@ -8,6 +8,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'TheLateGatsby';
+            src: url('TheLateGatbsy.ttf') format('truetype');
+        }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
@@ -78,6 +82,7 @@
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 700;
+            font-family: 'TheLateGatsby', sans-serif;
         }
         nav ul {
             list-style: none;
@@ -122,6 +127,7 @@
             font-size: 2.5em;
             margin: 0;
             color: var(--primary-color);
+            font-family: 'TheLateGatsby', sans-serif;
         }
         .banner-sub {
             font-size: 1.5em;
@@ -321,7 +327,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#suites">Suites</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a herf="/offseason">Off Season</a></li>
+                    <li><a href="/offseason">Off Season</a></li>
                     <li><a href="/FAQ">FAQ</a></li>
                 </ul>
             </nav>
@@ -385,7 +391,7 @@
         <div class="suites">
             <div class="suite-section">
                 <h2><a href="/Captain">Captain Room</a></h2>
-                <img src="captain.jpg" alt="Captain Room" loading="lazy" onclick="openModal(this.src)">
+                <img src="captain.jpg" alt="Captain Room" loading="lazy" onclick="window.location.href='/Captain'">
                 <div class="price">
                     $140–$230<sup>*</sup> <span>CAD / night</span>
                 </div>
@@ -402,7 +408,7 @@
             </div>
             <div class="suite-section">
                 <h2><a href="/Courtyard">Courtyard Room</a></h2>
-                <img src="apartment.jpg" alt="Courtyard Room" loading="lazy" onclick="openModal(this.src)">
+                <img src="apartment.jpg" alt="Courtyard Room" loading="lazy" onclick="window.location.href='/Courtyard'">
                 <div class="price">
                     $160–$250<sup>*</sup> <span>CAD / night</span>
                 </div>
@@ -420,7 +426,7 @@
             </div>
             <div class="suite-section">
                 <h2><a href="/Sunset">Sunset Room</a></h2>
-                <img src="sunset.jpg" alt="Sunset Room" loading="lazy" onclick="openModal(this.src)">
+                <img src="sunset.jpg" alt="Sunset Room" loading="lazy" onclick="window.location.href='/Sunset'">
                 <div class="price">
                     $150–$240<sup>*</sup> <span>CAD / night</span>
                 </div>
@@ -440,7 +446,7 @@
             </div>
             <div class="suite-section">
                 <h2><a href="/Watercolour">Watercolour Room</a></h2>
-                <img src="watercolor.jpg" alt="Watercolour Room" loading="lazy" onclick="openModal(this.src)">
+                <img src="watercolor.jpg" alt="Watercolour Room" loading="lazy" onclick="window.location.href='/Watercolour'">
                 <div class="price">
                     $150–$240<sup>*</sup> <span>CAD / night</span>
                 </div>
@@ -464,6 +470,9 @@
             <img class="modal-content" id="modalImage">
         </div>
     </div>
+    <footer style="text-align: center; padding: 20px; background-color: white; margin-top: 40px;">
+        Thank you
+    </footer>
     <script>
         function toggleMenu() {
             document.querySelector('nav').classList.toggle('nav-open');
