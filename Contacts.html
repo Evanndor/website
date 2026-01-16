@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Evanndor Place - FAQ</title>
+    <title>Evanndor Place - Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Frequently Asked Questions about Evanndor Place">
+    <meta name="description" content="Contact information for Evanndor Place in Stratford, Ontario">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -12,5 +12,390 @@
             font-family: 'TheLateGatsby';
             src: url('TheLateGatsby.ttf') format('truetype');
         }
- 
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --accent-color: #e67e22;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+            background-image: url('nihgthouse.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0px;
+            background-attachment: fixed; /* Helps with parallax on some browsers */
+        }
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'TheLateGatsby', sans-serif;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: var(--primary-color);
+            margin-bottom: 5px;
+            transition: var(--transition);
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+        }
+        .banner {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .banner-head {
+            font-size: 2.5em;
+            margin: 0;
+            color: var(--primary-color);
+            font-family: 'TheLateGatsby', sans-serif;
+        }
+        .info {
+            font-size: 1em;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+        .info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .info a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .hero-images {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .hero img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .hero img:hover {
+            transform: scale(1.02);
+        }
+        .description {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        .faq-link {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-link a {
+            color: var(--secondary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .faq-link a:hover {
+            color: var(--accent-color);
+        }
+        .standard {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        .standard h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .standard ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .season {
+            font-style: italic;
+            color: #666;
+            margin-top: 20px;
+        }
+        .suites {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .suite-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .suite-section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        .suite-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .suite-section h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .suite-section img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .price {
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin: 10px 0;
+        }
+        .price sup {
+            font-size: 0.5em;
+        }
+        .price span {
+            font-size: 0.5em;
+            color: #666;
+        }
+        .price-conditions,
+        .features-list {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .features-list ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        /* Modal for image lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        /* Responsive menu */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            .nav-open ul {
+                display: flex;
+            }
+            .hero-images {
+                grid-template-columns: 1fr;
+            }
+            .hero img {
+                height: 300px;
+            }
+        }
+        /* Contact section styles */
+        .contact-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .contact-section h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-family: 'TheLateGatsby', sans-serif;
+        }
+        .contact-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="https://www.evanndor.com/" class="logo">Evanndor Place</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#suites">Suites</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/FAQ">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="main" id="home">
+        <div class="banner">
+            <h1 class="banner-head">E V A N N D O R</h1>
+            <div class="info" id="contact">
+                14 Milton St.<br>
+                Stratford, Ontario<br>
+                Martin : (226) 750-2102 (Text is Prefered)<br>
+                Eva : (519) 577-6171<br>
+                Email: <a href="mailto:evanndor@gmail.com">evanndor@gmail.com</a>
+            </div>
+        </div>
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>We're here to help! Reach out to us via phone, text, or email for any inquiries or bookings.</p>
+                <p><strong>Address:</strong><br>14 Milton St.<br>Stratford, Ontario</p>
+                <p><strong>Phone:</strong><br>Martin: (226) 750-2102 (Text Preferred)<br>Eva: (519) 577-6171</p>
+                <p><strong>Email:</strong><br><a href="mailto:evanndor@gmail.com">evanndor@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer">
+            © 2026 Evanndor Place. All rights reserved.
+        </div>
+        <!-- Modal for lightbox (optional, as no images, but included for consistency) -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('nav-open');
+        }
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // Parallax background effect
+        window.addEventListener('scroll', function() {
+            let scroll = window.pageYOffset;
+            document.body.style.backgroundPositionY = (-scroll * 0.3) + 'px'; // Adjusted speed for gentle movement
+        });
+    </script>
+</body>
 </html>
