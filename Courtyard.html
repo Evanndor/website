@@ -20,7 +20,6 @@
             --accent-color: #e67e22;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
-            --announcement-height: 20px; /* Half the original size */
         }
         body {
             margin: 0;
@@ -34,39 +33,11 @@
             background-position: center 0px;
             background-attachment: fixed; /* Helps with parallax on some browsers */
         }
-        .announcement-bar {
-            background-color: #808080; /* Grey background */
-            color: #000; /* Black text */
-            text-align: center;
-            padding: 5px 0; /* Adjusted for smaller height */
-            z-index: 999; /* Below header */
-            overflow: hidden;
-            height: var(--announcement-height);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .announcement-bar p {
-            display: inline-block;
-            white-space: nowrap;
-            animation: scroll-left 15s linear infinite; /* Slowed down to 30s */
-            font-size: 0.8em; /* Smaller font size */
-            margin: 0;
-            padding: 0 100%; /* Extra padding to make scrolling seamless */
-        }
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
         header {
             background-color: white;
             box-shadow: var(--shadow);
             position: sticky;
-            top: 0; /* Now at top since announcement is below */
+            top: 0;
             z-index: 1000;
         }
         .nav-container {
@@ -128,11 +99,6 @@
             margin: 0;
             color: var(--primary-color);
             font-family: 'TheLateGatsby', sans-serif;
-        }
-        .banner-sub {
-            font-size: 1.5em;
-            color: var(--primary-color);
-            margin: 10px 0;
         }
         .info {
             font-size: 1em;
@@ -260,31 +226,54 @@
             list-style-type: circle;
             padding-left: 20px;
         }
-        /* Gallery styles added to constrain image sizes */
+        /* Gallery section styles - matching the suite room pages */
+        .gallery-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .gallery-section h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
         }
         .gallery-item {
-            text-align: center;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+            background-color: white;
+            padding: 10px;
             border-radius: 8px;
             box-shadow: var(--shadow);
             transition: var(--transition);
+        }
+        .gallery-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
             cursor: pointer;
         }
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
         .gallery-item .desc {
-            margin-top: 10px;
+            padding: 8px;
+            text-align: center;
             font-size: 0.9em;
-            color: #666;
+            color: #526066;
+        }
+        .calendar {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .footer {
+            margin: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
         }
         /* Modal for image lightbox */
         .modal {
