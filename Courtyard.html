@@ -260,6 +260,32 @@
             list-style-type: circle;
             padding-left: 20px;
         }
+        /* Gallery styles added to constrain image sizes */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item .desc {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
         /* Modal for image lightbox */
         .modal {
             display: none;
