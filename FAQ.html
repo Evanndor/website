@@ -8,6 +8,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'TheLateGatsby';
+            src: url('TheLateGatsby.ttf') format('truetype');
+        }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
@@ -49,6 +53,7 @@
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 700;
+            font-family: 'TheLateGatsby', sans-serif;
         }
         nav ul {
             list-style: none;
@@ -93,6 +98,7 @@
             font-size: 2.5em;
             margin: 0;
             color: var(--primary-color);
+            font-family: 'TheLateGatsby', sans-serif;
         }
         .banner-sub {
             font-size: 1.5em;
@@ -285,11 +291,13 @@
         .faq-section {
             margin: 20px 0;
         }
-        .faq-section h2 {
+        .faq-section h2,
+        .map-section h2 {
             font-size: 1.8em;
             color: var(--primary-color);
             margin-bottom: 15px;
             text-align: center;
+            font-family: 'TheLateGatsby', sans-serif;
         }
         .faq-list {
             list-style: none;
@@ -358,23 +366,6 @@
         </div>
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
-            </div>
-
-        <div class="map-section">
-            <h2>Location</h2>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.5298156663653!2d-80.98102898506242!3d43.36594477913223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eadfa58026ac3%3A0x2f0f15d41a0a9bf3!2s14+Milton+St%2C+Stratford%2C+ON+N5A+3T8!5e0!3m2!1sen!2sca!4v1553186543500" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            <ul>
-                <li>Stratford Festival Theatre: 0.4 mile / 600 m</li>
-                <li>Avon Theatre: 0.3 mile / 450 m</li>
-                <li>Studio Theatre: 0.3 mile / 450 m</li>
-                <li>Tom Patterson Theatre: 0.7 mile / 1.1 km</li>
-                <li>Victoria Lake and River: 0.6 mile / 1 km</li>
-                <li>London International Airport: 32 miles / 51 km</li>
-            </ul>
-        </div>
-
             <p class="description">Below are answers to Frequently Asked Questions about Evanndor Place. If you don’t find what you’re looking for, please feel free to reach out—we’d be happy to assist you!</p>
             <ul class="faq-list">
                 <li>
@@ -457,6 +448,20 @@
                     <strong>Does the room require a key? Where do I pick it up?</strong>
                     <p>All rooms and the entrance use keypad combinations. You’ll receive access details via email (or your preferred method) once your room is ready.</p>
                 </li>
+            </ul>
+        </div>
+        <div class="map-section">
+            <h2>Location</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.5298156663653!2d-80.98102898506242!3d43.36594477913223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eadfa58026ac3%3A0x2f0f15d41a0a9bf3!2s14+Milton+St%2C+Stratford%2C+ON+N5A+3T8!5e0!3m2!1sen!2sca!4v1553186543500" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <ul>
+                <li>Stratford Festival Theatre: 0.4 mile / 600 m</li>
+                <li>Avon Theatre: 0.3 mile / 450 m</li>
+                <li>Studio Theatre: 0.3 mile / 450 m</li>
+                <li>Tom Patterson Theatre: 0.7 mile / 1.1 km</li>
+                <li>Victoria Lake and River: 0.6 mile / 1 km</li>
+                <li>London International Airport: 32 miles / 51 km</li>
             </ul>
         </div>
         <div class="footer">
