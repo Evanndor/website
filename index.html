@@ -44,22 +44,25 @@
             height: var(--announcement-height);
             display: flex;
             align-items: center;
-            justify-content: center;
         }
-        .announcement-bar p {
+        .marquee {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll-left 45s linear infinite;
+        }
+        .marquee span {
             display: inline-block;
             white-space: nowrap;
-            animation: scroll-left 45s linear infinite; /* Slowed down further to 45s, seamless without pause */
             font-size: 0.8em; /* Smaller font size */
             margin: 0;
-            padding: 0 100%; /* Extra padding to make scrolling seamless */
+            flex-shrink: 0;
         }
         @keyframes scroll-left {
             0% {
-                transform: translateX(100%);
+                transform: translateX(0%);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
         header {
@@ -341,7 +344,10 @@
         </div>
     </header>
     <div class="announcement-bar">
-        <p>We are now booking for the 2026 season. Booking your accomodation with us directily has many benefits. If you have any questions, feel free to send a text message or email and someone will respond promptly. :)</p>
+        <div class="marquee">
+            <span>We are now booking for the 2026 season. Booking your accomodation with us directily has many benefits. If you have any questions, feel free to send a text message or email and someone will respond promptly. :)</span>
+            <span>We are now booking for the 2026 season. Booking your accomodation with us directily has many benefits. If you have any questions, feel free to send a text message or email and someone will respond promptly. :)</span>
+        </div>
     </div>
     <div class="main" id="home">
         <div class="banner">
